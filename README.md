@@ -10,6 +10,12 @@ providers, please modify [lego.sh](/lego.sh) and [choose another dns provider](h
 Create a file called `.env`, define `EMAIL` (email used for letsencrypt
 account) and `CF_DNS_API_TOKEN` (see [lego docs](https://go-acme.github.io/lego/dns/cloudflare/)).
 
+Example:
+```
+EMAIL=someone@example.com
+CF_DNS_API_TOKEN=998877665544332211aabbccddeeff
+```
+
 # Usage
 
 ```sh
