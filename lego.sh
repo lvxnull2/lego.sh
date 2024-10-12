@@ -8,10 +8,16 @@ if [ -r .env ]; then
   set +a
 fi
 
+if hash podman 2>/dev/null; then
+  docker=podman
+else
+  docker=docker
+fi
+
 # Crash if the token is unset
 : "${CF_DNS_API_TOKEN}"
 
-exec podman run \
+exec $docker run \
   --rm \
   --pull always \
   -e CF_DNS_API_TOKEN \
