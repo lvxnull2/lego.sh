@@ -2,6 +2,8 @@
 
 A shell script wrapper around [lego](https://go-acme.github.io/lego/) that
 installs certificates into a docker/podman volume.
+By default its configured to use dns challenge via cloudflare. For other dns
+providers, please modify `lego.sh` and [choose another dns provider](https://go-acme.github.io/lego/dns/).
 
 # Setup
 
