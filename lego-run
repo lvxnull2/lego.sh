@@ -2,4 +2,4 @@
 
 cd "$(dirname "$(readlink -f "$0")")" || exit
 
-exec ./lego.sh "$@" run --run-hook /install-cert.sh
+exec ./lego.sh "$@" run --run-hook ./install-cert.sh
